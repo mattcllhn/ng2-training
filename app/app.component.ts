@@ -12,12 +12,28 @@ import{Component }from '@angular/core';
         </div>
       </nav>
     </header>
-    <div  *ngFor = "let user of users" class = "jumbotron">
-      <h1>{{message}}, {{user.username}}</h1>
-      <p>I know your real name is {{user.name}}</p>
+
+    <main>
+    <div class = "row">
+      <div class = "col-sm-4">
+      <ul class = "list-group users-list"  *ngFor = "let user of users">
+        <li class = "list-group-item">
+        {{message}}, {{user.username}}.
+        I know your real name is {{user.name}}
+        </li>
 
 
+      </ul>
+      </div>
+      <div class = "col-sm-8">
+        <div class = "jumbotron">
+          <h1>My Angular2 App!</h1>
+        </div>
+      </div>
     </div>
+
+
+    </main>
     <footer class = "text-center">
     Copyright &copy; 2016
     </footer>

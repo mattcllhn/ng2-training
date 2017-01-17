@@ -20,7 +20,7 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <header>\n\n      <nav class = \"navbar navbar-inverse\">\n\n        <div class = \"navbar-header\">\n          <a href = \"/\" class = \"navbar-brand\">My Angular2 App!</a>\n        </div>\n      </nav>\n    </header>\n    <div  *ngFor = \"let user of users\" class = \"jumbotron\">\n      <h1>{{message}}, {{user.username}}</h1>\n      <p>I know your real name is {{user.name}}</p>\n\n\n    </div>\n    <footer class = \"text-center\">\n    Copyright &copy; 2016\n    </footer>\n    "
+        template: "\n    <header>\n\n      <nav class = \"navbar navbar-inverse\">\n\n        <div class = \"navbar-header\">\n          <a href = \"/\" class = \"navbar-brand\">My Angular2 App!</a>\n        </div>\n      </nav>\n    </header>\n\n    <main>\n    <div class = \"row\">\n      <div class = \"col-sm-4\">\n      <ul class = \"list-group users-list\"  *ngFor = \"let user of users\">\n        <li class = \"list-group-item\">\n        {{message}}, {{user.username}}.\n        I know your real name is {{user.name}}\n        </li>\n\n\n      </ul>\n      </div>\n      <div class = \"col-sm-8\">\n        <div class = \"jumbotron\">\n          <h1>My Angular2 App!</h1>\n        </div>\n      </div>\n    </div>\n\n\n    </main>\n    <footer class = \"text-center\">\n    Copyright &copy; 2016\n    </footer>\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
