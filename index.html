@@ -4,13 +4,16 @@
     <meta charset="utf-8">
     <title>my ng2App</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <script src="node_modules/zone.js/dist/zone.js" charset="utf-8"></script>
     <script src="node_modules/core-js/client/shim.min.js" charset="utf-8"></script>
+    <script src="node_modules/zone.js/dist/zone.js" charset="utf-8"></script>
     <script src="node_modules/reflect-metadata/Reflect.js" charset="utf-8"></script>
-    <script src="node_modules/systemjs/dist/system.src.js" charset="utf-8"></script>
-    <script src="systemjs.config.js" charset="utf-8"></script>
+    <script src="node_modules/systemjs/dist/system.js" charset="utf-8"></script>
+    <script src="systemjs.config.js"></script>
+    <script type="text/javascript">
+      System.import('app').catch(function(err) {console.log(err);});
+    </script>
   </head>
   <body class = "container">
-<h1>hello there</h1>
+    <my-app> </my-app>
   </body>
 </html>
