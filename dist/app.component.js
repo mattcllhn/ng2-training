@@ -8,13 +8,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 var AppComponent = (function () {
     function AppComponent() {
+        this.message = "Hello";
+        this.users = [
+            { id: 12, name: 'Chris', username: 'XxsKILLosaurus_RexxX420' },
+            { id: 12, name: 'Pete', username: '__theGrImRePetEr' },
+            { id: 12, name: 'Matt', username: '_-_YOMAMA_-_' }
+        ];
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: '<div class = "jumbotron"><h1>hello lorld</h1></div>'
+        template: "\n    <header>\n\n      <nav class = \"navbar navbar-inverse\">\n\n        <div class = \"navbar-header\">\n          <a href = \"/\" class = \"navbar-brand\">My Angular2 App!</a>\n        </div>\n      </nav>\n    </header>\n    <div  *ngFor = \"let user of users\" class = \"jumbotron\">\n      <h1>{{message}}, {{user.username}}</h1>\n      <p>I know your real name is {{user.name}}</p>\n\n\n    </div>\n    <footer class = \"text-center\">\n    Copyright &copy; 2016\n    </footer>\n    "
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
