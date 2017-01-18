@@ -6,6 +6,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
+// import{UserProfileComponent} from './users/userProfile.component';
 var AppComponent = (function () {
     function AppComponent() {
         this.message = "Hello";
@@ -17,9 +18,6 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.selectUser = function (userIn) {
         this.activeUser = userIn;
-    };
-    AppComponent.prototype.clearUser = function () {
-        this.activeUser = undefined;
     };
     return AppComponent;
 }());

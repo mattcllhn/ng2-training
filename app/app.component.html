@@ -24,15 +24,7 @@
   </ul>
   </div>
   <div class = "col-sm-8">
-    <div class = "jumbotron">
-      <h1 *ngIf = "activeUser == undefined">Welcome to My Angular2 App!</h1>
-        <div *ngIf = "activeUser">
-        <button class = "btn btn-xs pull-right" (click) = "clearUser()">CLEAR</button>
-          <h3>{{message}} {{activeUser.username}}</h3>
-          <p>His real name is {{activeUser.name}}</p>
-          <input class = "form-control" [(ngModel)] = "activeUser.name" />
-        </div>
-    </div>
+    <user-profile [user] = "activeUser"></user-profile>
   </div>
 </div>
 

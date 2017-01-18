@@ -1,6 +1,6 @@
 import{Component }from '@angular/core';
 import{User }from './shared/models/user';
-
+// import{UserProfileComponent} from './users/userProfile.component';
 
 
 @Component({
@@ -20,8 +20,6 @@ export class AppComponent{
     selectUser(userIn){
       this.activeUser = userIn;
     }
-    clearUser(){
-      this.activeUser = undefined;
-    }
+
 
 }
