@@ -11,13 +11,17 @@ var AppComponent = (function () {
     function AppComponent() {
         this.message = "Hello";
         this.users = [
-            { id: 12, name: 'Chris', username: 'XxsKILLosaurus_RexxX420' },
-            { id: 12, name: 'Pete', username: '__theGrImRePetEr' },
-            { id: 12, name: 'Matt', username: '_-_YOMAMA_-_' }
+            { id: 12, name: 'Chris', userName: 'XxsKILLosaurus_RexxX420' },
+            { id: 12, name: 'Pete', userName: '__theGrImRePetEr' },
+            { id: 12, name: 'Matt', userName: '_-_YOMAMA_-_' }
         ];
     }
     AppComponent.prototype.selectUser = function (userIn) {
         this.activeUser = userIn;
+    };
+    AppComponent.prototype.onUserCreated = function (data) {
+        console.log(data.user);
+        this.users.push(data.user);
     };
     return AppComponent;
 }());

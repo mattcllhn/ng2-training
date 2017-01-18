@@ -12,13 +12,17 @@ import{User }from './shared/models/user';
 export class AppComponent{
     message: string = "Hello";
     users : User[] = [
-              {id:12, name:'Chris', username:'XxsKILLosaurus_RexxX420'},
-              {id:12, name:'Pete', username:'__theGrImRePetEr'},
-              {id:12, name:'Matt', username:'_-_YOMAMA_-_'}
+              {id:12, name:'Chris', userName:'XxsKILLosaurus_RexxX420'},
+              {id:12, name:'Pete', userName:'__theGrImRePetEr'},
+              {id:12, name:'Matt', userName:'_-_YOMAMA_-_'}
             ]
     activeUser: User[];
     selectUser(userIn){
       this.activeUser = userIn;
+    }
+    onUserCreated(data){
+      console.log(data.user);
+      this.users.push(data.user);
     }
 
 

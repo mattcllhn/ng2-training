@@ -17,12 +17,12 @@
   <ul class = "list-group users-list"  *ngFor = "let user of users">
     <li class = "list-group-item" (click) = "selectUser(user)"
       [class.active]= "user===activeUser">
-    {{message}}, {{user.username}}.
+    {{message}}, {{user.userName}}.
     I know your real name is {{user.name}}
     </li>
   </ul>
-  
-  <user-form></user-form>
+
+  <user-form (userCreated) = "onUserCreated($event)"></user-form>
 
   </div>
   <div class = "col-sm-8">
