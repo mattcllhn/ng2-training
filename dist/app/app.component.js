@@ -26,8 +26,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n    <header>\n\n      <nav class = \"navbar navbar-inverse\">\n\n        <div class = \"navbar-header\">\n          <a href = \"/\" class = \"navbar-brand\">My Angular2 App!</a>\n        </div>\n      </nav>\n    </header>\n\n    <main>\n    <div class = \"row\">\n      <div class = \"col-sm-4\">\n      <ul class = \"list-group users-list\"  *ngFor = \"let user of users\">\n        <li class = \"list-group-item\" (click) = \"selectUser(user)\"\n          [class.active]= \"user===activeUser\">\n        {{message}}, {{user.username}}.\n        I know your real name is {{user.name}}\n        </li>\n\n\n      </ul>\n      </div>\n      <div class = \"col-sm-8\">\n        <div class = \"jumbotron\">\n          <h1 *ngIf = \"activeUser == undefined\">Welcome to My Angular2 App!</h1>\n            <div *ngIf = \"activeUser\">\n            <button class = \"btn btn-xs pull-right\" (click) = \"clearUser()\">CLEAR</button>\n              <h3>{{message}} {{activeUser.username}}</h3>\n              <p>His real name is {{activeUser.name}}</p>\n            </div>\n        </div>\n      </div>\n    </div>\n\n\n    </main>\n    <footer class = \"text-center\">\n    Copyright &copy; 2016\n    </footer>\n    ",
-        styles: ["\n      .users-list{\n        cursor:pointer;\n      }\n      \n      "]
+        templateUrl: './app/app.component.html',
+        styleUrls: ['./app/app.component.css']
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
